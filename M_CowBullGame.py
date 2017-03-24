@@ -44,8 +44,8 @@ def print_rules():
 
 def set_difficulty():
     print("\nSelect your Difficulty Level:\n\nEnter 'E' for Easy\n (12 chances for every word but less points there to earn)\n\nEnter 'M' for Medium\n (10 chances for every word but moderate points there to earn)\n\nEnter 'H' for Hard\n (8 chances for every word but more points there to earn)\n")
-    n = input().upper()
-    while n=='E' or n=='M' or n=='H':
+    while 1:
+        n = input().upper()
         if n=='E':
             print("\nDifficulty set: EASY")
             return(12)
@@ -57,7 +57,6 @@ def set_difficulty():
             return(8)
         else:
             print("\nInvalid Input.")
-            return(0)
 
 def start_game(turns, total_score, n):
     word=set_word()
